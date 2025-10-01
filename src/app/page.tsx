@@ -25,7 +25,6 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
     <main className="min-h-screen min-w-min bg-slate-900 font-montserrat relative">
-      {/* Header */}
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -58,10 +57,10 @@ export default function Home() {
         </div>
       </motion.header>
 
-      {/* Hero Section */}
+   
       <section className=" text-white px-6 py-8">
         <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          {/* Texto principal */}
+        
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -99,7 +98,7 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Estatísticas */}
+      
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,7 +120,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
 
-          {/* Card Analytics */}
+ 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -163,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+
       <section className="py-24 bg-slate-800/50">
         <div className="container mx-auto px-4">
           {/* Título */}
@@ -180,7 +179,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Cards */}
+    
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -235,7 +234,7 @@ export default function Home() {
       </section>
 
 
-      {/* How it Works */}
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -299,7 +298,7 @@ export default function Home() {
       </section>
 
 
-      {/* Inventory Formats */}
+
       <section className="bg-slate-800/50 py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -370,42 +369,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      {/* <section className="py-20 bg-gradient-to-br from-green-500/60 to-teal-500">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-4xl font-bold mb-4 text-white">Pronto para Começar?</h2>
-            <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-              Junte-se a milhares de publishers que já estão maximizando sua receita com a WinUp
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button className="bg-white text-green-600 hover:bg-slate-100 px-8 py-3">Começar Gratuitamente</Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
-                Falar com Vendas
-              </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-green-100">
-              <div className="flex items-center space-x-2">
-                <FiStar className="w-5 h-5 text-yellow-400" />
-                <span>4.9/5 Rating</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <FiZap className="w-5 h-5" />
-                <span>Setup em 5 minutos</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <FiUsers className="w-5 h-5" />
-                <span>Suporte 24/7</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
-
-
-      {/* CTA Section */}
+    
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl p-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/90 to-blue-600/20 backdrop-blur-sm" />
