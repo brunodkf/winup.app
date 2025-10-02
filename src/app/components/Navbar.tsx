@@ -3,8 +3,11 @@ import React from 'react'
 import { motion } from "framer-motion"
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
+import { useSmoothScroll } from '../hooks/useSmoothScrool'
 
 const Navbar = () => {
+    const scrollToSection = useSmoothScroll(-60);
+    
     return (
         <motion.header
             initial={{ y: -100 }}
