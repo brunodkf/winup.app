@@ -11,7 +11,7 @@ import {
 const Inventory = () => {
     return (
 
-        <section className="bg-slate-800/50 py-20">
+        <section id='inventory' className="bg-slate-800/50 py-20">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

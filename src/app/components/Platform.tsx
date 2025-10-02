@@ -11,7 +11,7 @@ import {
 const Platform = () => {
     return (
 
-        <section className="py-24 bg-slate-800/50">
+        <section id='platform' className="py-24 bg-slate-800/50">
             <div className="container mx-auto px-4">
            
                 <motion.div

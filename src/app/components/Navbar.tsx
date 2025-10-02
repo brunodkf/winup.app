@@ -4,10 +4,20 @@ import { motion } from "framer-motion"
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { useSmoothScroll } from '../hooks/useSmoothScrool'
+import { menuitem } from 'framer-motion/client'
+import Link from 'next/link'
 
 const Navbar = () => {
+
     const scrollToSection = useSmoothScroll(-60);
-    
+
+    const menuItems = [
+        { label: "Início", href: "/", id: 'top' },
+        { label: "Recursos", href: "/recursos", id: 'platform' },
+        { label: "Como Funciona", href: "/services", id: 'steps' },
+        { label: "Formatos", href: "/formatos", id: 'inventory' },
+    ];
+
     return (
         <motion.header
             initial={{ y: -100 }}
@@ -21,21 +31,29 @@ const Navbar = () => {
 
                 <div className="flex gap-4 items-center">
                     <nav className="hidden md:flex items-center gap-5">
-                        <a href="#" className="text-slate-300 hover:text-white text-sm tracking-wider transition-colors">
-                            Recursos
-                        </a>
-                        <a href="#" className="text-slate-300 hover:text-white text-sm tracking-wider transition-colors">
-                            Como Funciona
-                        </a>
-                        <a href="#" className="text-slate-300 hover:text-white text-sm tracking-wider transition-colors">
-                            Preços
-                        </a>
+                        {
+                            menuItems.map((item) => (
+                                <Link
+                                    onClick={(e) => {
+                                        scrollToSection(e, `${item.id}`);
+                                    }}
+                                    key={item.href}
+                                    href={item.href}
+                                    className="text-slate-300 hover:text-white text-sm tracking-wider transition-colors">
+                                    {item.label}
+                                </Link>
+                            ))
+                        }
                     </nav>
                     <div className="flex items-center gap-4 ml-3">
                         <Button className="text-slate-300 cursor-pointer hover:text-green-500 hover:border-green-500 hover:bg-transparent transition-all font-semibold uppercase tracking-wider border bg-transparent">
                             Login
                         </Button>
-                        <Button className="bg-green-500/60 cursor-pointer hover:bg-green-600 text-white font-semibold uppercase tracking-wider">Cadastre-se</Button>
+                        <Button
+                            onClick={(e) => {
+                                scrollToSection(e, "cta");
+                            }}
+                            className="bg-green-500/60 cursor-pointer hover:bg-green-600 text-white font-semibold uppercase tracking-wider">Cadastre-se</Button>
                     </div>
                 </div>
             </div>

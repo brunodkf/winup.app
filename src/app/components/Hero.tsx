@@ -4,8 +4,12 @@ import { motion } from "framer-motion"
 import React from 'react'
 import { FiArrowRight, FiTrendingUp } from 'react-icons/fi'
 import { IoIosPlay } from 'react-icons/io'
+import { useSmoothScroll } from '../hooks/useSmoothScrool'
 
 const Hero = () => {
+
+    const scrollToSection = useSmoothScroll(-60);
+
     return (
 
         <section className=" text-white px-6 py-8">
@@ -37,7 +41,11 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Button className="bg-green-500/60 cursor-pointer hover:bg-green-600 text-white px-6 py-3 font-medium rounded-md shadow">
+                        <Button
+                            onClick={(e) => {
+                                scrollToSection(e, "cta");
+                            }}
+                            className="bg-green-500/60 cursor-pointer hover:bg-green-600 text-white px-6 py-3 font-medium rounded-md shadow">
                             Começar Agora <FiArrowRight />
                         </Button>
                         <Button
