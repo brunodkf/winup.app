@@ -26,7 +26,7 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                    <Image src='/logo.webp' alt="Logo Image" className="max-w-20 dark:filter-none" width={120} height={50} />
+                    <Image src='/logo.png' alt="Logo Image" className="max-w-20 dark:filter-none" width={120} height={50} />
                 </div>
 
                 <div className="flex gap-4 items-center">
